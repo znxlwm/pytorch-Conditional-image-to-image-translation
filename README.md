@@ -1,10 +1,11 @@
 # pytorch-Conditional-image-to-image-translation
 Pytorch implementation of Conditional image-to-image translation [1] (CVPR 2018)
-* Network architecture and parameters without information in the paper were set arbitrarily.
+* Parameters without information in the paper were set arbitrarily.
+<img src = 'assets/network_architecture.png'>
 
 ## Usage
 ```
-python train.py --dataset dataset --domain_A A --domain_B B
+python train.py --dataset dataset
 ```
 
 ### Folder structure
@@ -12,19 +13,19 @@ The following shows basic folder structure.
 ```
 ├── data
     ├── dataset # not included in this repo
-        ├── A_train
+        ├── trainA
             ├── aaa.png
             ├── bbb.jpg
             └── ...
-        ├── A_test
+        ├── trainB
             ├── ccc.png
             ├── ddd.jpg
             └── ...
-        ├── B_train
+        ├── testA
             ├── eee.png
             ├── fff.jpg
             └── ...
-        └── B_test
+        └── testB
             ├── ggg.png
             ├── hhh.jpg
             └── ...
@@ -36,8 +37,44 @@ The following shows basic folder structure.
 
 ## Resutls
 ### paper results
+<img src = 'assets/paper_results.png'>
 
-### celebA results
+### celebA gender translation results
+<table align='center'>
+<tr align='center'>
+<td> InputA - InputB - A2B - B2A (this repo) </td>
+</tr>
+<tr>
+<td><img src = 'assets/1.png' height=150px>
+</tr>
+<tr>
+<td><img src = 'assets/2.png' height=150px>
+</tr>
+<tr>
+<td><img src = 'assets/3.png' height=150px>
+</tr>
+<tr>
+<td><img src = 'assets/4.png' height=150px>
+</tr>
+<tr>
+<td><img src = 'assets/5.png' height=150px>
+</tr>
+<tr>
+<td><img src = 'assets/6.png' height=150px>
+</tr>
+<tr>
+<td><img src = 'assets/7.png' height=150px>
+</tr>
+<tr>
+<td><img src = 'assets/8.png' height=150px>
+</tr>
+<tr>
+<td><img src = 'assets/9.png' height=150px>
+</tr>
+<tr>
+<td><img src = 'assets/10.png' height=150px>
+</tr>
+</table>
 
 ## Development Environment
 * NVIDIA GTX 1080 ti
