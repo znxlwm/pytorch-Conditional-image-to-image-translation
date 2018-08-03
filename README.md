@@ -4,13 +4,34 @@ Pytorch implementation of Conditional image-to-image translation [1] (CVPR 2018)
 
 ## Usage
 ```
-
+python train.py --dataset dataset --domain_A A --domain_B B
 ```
 
 ### Folder structure
 The following shows basic folder structure.
 ```
-
+├── data
+    ├── dataset # not included in this repo
+        ├── A_train
+            ├── aaa.png
+            ├── bbb.jpg
+            └── ...
+        ├── A_test
+            ├── ccc.png
+            ├── ddd.jpg
+            └── ...
+        ├── B_train
+            ├── eee.png
+            ├── fff.jpg
+            └── ...
+        └── B_test
+            ├── ggg.png
+            ├── hhh.jpg
+            └── ...
+├── train.py # training code
+├── utils.py
+├── networks.py
+└── name_results # results to be saved here
 ```
 
 ## Resutls
