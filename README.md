@@ -54,9 +54,6 @@ The following shows basic folder structure.
 <td><img src = 'assets/3.png' height=150px>
 </tr>
 <tr>
-<td><img src = 'assets/4.png' height=150px>
-</tr>
-<tr>
 <td><img src = 'assets/5.png' height=150px>
 </tr>
 <tr>
