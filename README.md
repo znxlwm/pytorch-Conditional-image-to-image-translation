@@ -39,7 +39,7 @@ The following shows basic folder structure.
 ### paper results
 <img src = 'assets/paper_results.png'>
 
-### celebA gender translation results
+### celebA gender translation results (100 epochs)
 <table align='center'>
 <tr align='center'>
 <td> InputA - InputB - A2B - B2A (this repo) </td>
