@@ -1,6 +1,6 @@
 # pytorch-Conditional-image-to-image-translation
 Pytorch implementation of Conditional image-to-image translation [1] (CVPR 2018)
-* Parameters without information in the paper were set arbitrarily.
+* Parameters without information in the paper were set arbitrarily. (I could not find the supplementary document.)
 <img src = 'assets/network_architecture.png'>
 
 ## Usage
