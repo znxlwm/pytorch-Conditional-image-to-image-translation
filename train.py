@@ -7,8 +7,6 @@ from torchvision import transforms
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', default='dataset', help='dataset')
-parser.add_argument('--domain_A', default='A', help='domain A dataset name')
-parser.add_argument('--domain_B', default='B', help='domain B dataset name')
 parser.add_argument('--in_ngc', type=int, default=3, help='input channel for generator')
 parser.add_argument('--out_ngc', type=int, default=3, help='output channel for generator')
 parser.add_argument('--in_ndc', type=int, default=3, help='input channel for discriminator')
@@ -45,10 +43,10 @@ transform = transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))
 ])
-train_loader_A = utils.data_load(os.path.join('data', args.dataset), args.domain_A + '_train', transform, args.batch_size, shuffle=True, drop_last=True)
-train_loader_B = utils.data_load(os.path.join('data', args.dataset), args.domain_B + '_train', transform, args.batch_size, shuffle=True, drop_last=True)
-test_loader_A = utils.data_load(os.path.join('data', args.dataset), args.domain_A + '_test', transform, 1, shuffle=True, drop_last=True)
-test_loader_B = utils.data_load(os.path.join('data', args.dataset), args.domain_B + '_test', transform, 1, shuffle=True, drop_last=True)
+train_loader_A = utils.data_load(os.path.join('data', args.dataset), 'trainA', transform, args.batch_size, shuffle=True, drop_last=True)
+train_loader_B = utils.data_load(os.path.join('data', args.dataset), 'trainB', transform, args.batch_size, shuffle=True, drop_last=True)
+test_loader_A = utils.data_load(os.path.join('data', args.dataset), 'testA', transform, 1, shuffle=True, drop_last=True)
+test_loader_B = utils.data_load(os.path.join('data', args.dataset), 'testB', transform, 1, shuffle=True, drop_last=True)
 
 # network
 En_A = networks.encoder(in_nc=args.in_ngc, nf=args.ngf, img_size=args.img_size).to(device)
